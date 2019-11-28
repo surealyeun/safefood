@@ -290,6 +290,20 @@ calendar.setOnClickListener('days-blocks',
     // Called when a day block is clicked
     function () {
         console.log("Day block clicked3");
+        console.log(calendar.date);
+		$.ajax({
+			url : "searchByDate.do",
+			type : "post",
+			data : {
+				date : calendar.date
+			},
+			success : function(res) {
+				console.log(res);
+			},
+			error : function() {
+				alert("일일 섭취 정보 검색 실패");
+			}
+		});
     }
 );
 
@@ -317,66 +331,6 @@ calendar.setOnClickListener('year-slider',
     }
 );
 
-
-// ------------------------------------- organizer OnClickListener
-// Days Block Click Listener
-organizer.setOnClickListener('days-blocks',
-    // Called when a day block is clicked
-    function () {
-        console.log("Day block clicked4");
-        
-    }
-);
-
-// Days Block Long Click Listener
-organizer.setOnLongClickListener('days-blocks',
-    // Called when a day block is long clicked
-    function () {
-        console.log("Day block long clicked2");
-    }
-);
-
-// Month Slider (Left and Right Arrow) Click Listeners
-organizer.setOnClickListener('month-slider',
-    // Called when the month left arrow is clicked
-    function () {
-        console.log("Month back slider clicked3");
-    },
-    // Called when the month right arrow is clicked
-    function () {
-        console.log("Month next slider clicked3");
-    }
-);
-
-// Year Slider (Left and Right Arrow) Click Listeners
-organizer.setOnClickListener('year-slider',
-    // Called when the year left arrow is clicked
-    function () {
-        console.log("Year back slider clicked");
-    },
-    // Called when the year right arrow is clicked
-    function () {
-        console.log("Year next slider clicked");
-    }
-);
-
-
-organizer.onMonthChange = function (callback) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            // TODO : Change the Organizer's Data to the new Data
-            // TODO : that you just grabbed from the Ajax Request
-
-            organizer.data = this.responseText;
-
-            // TODO : Call the Callback to display the Data
-            callback();
-        }
-    };
-    xhttp.open("GET", "someurl.json", true);
-    xhttp.send();
-};
 
 // https://github.com/nizarmah/calendar-javascript-lib#calendar-onclicklisteners
 </script>
