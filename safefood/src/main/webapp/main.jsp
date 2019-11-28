@@ -115,7 +115,7 @@
    	    <div class="bottom_contents" id="bottom_contents">
 	   	    <div id="bottom_buttons">
 	   	    	 <div id="link_search">
-	   	    	 	<input type="button" class="btn_search" onclick="location.href='information.jsp'">
+	   	    	 	<input type="button" class="btn_search" onclick="location.href='search.do'">
 	   	    	 </div>
 	   	    	 
 	   	    	 <div id="link_calendar">

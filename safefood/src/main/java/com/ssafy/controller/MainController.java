@@ -100,6 +100,8 @@ public class MainController {
 		System.out.println(user.getAllergy());
 		System.out.println(user.getName());
 		if(service.updateUser(user)>0) {
+			session.setAttribute("IsLogin", user.getId());
+			session.setAttribute("user", service.selectUser(user));
 			session.setAttribute("message", "정보 수정에 성공하였습니다.");
 			return "redirect:update.do";
 		} else {
@@ -174,7 +176,7 @@ public class MainController {
 		List<Food> danger = new ArrayList<>();
 		for (int i = 0; i < fs.size(); i++) {
 			for (int j = 0; j < all.length; j++) {
-				
+				System.out.println("식품 원재료: "+fs.get(i).getMaterial());
 				if(fs.get(i).getMaterial().contains(all[j])) {
 					danger.add(fs.get(i));
 					System.out.println("danger"+fs.get(i));
@@ -190,7 +192,7 @@ public class MainController {
 		session.setAttribute("safe1", safe.get(0));
 		session.setAttribute("safe2", safe.get(1));
 		if(danger.size() > 0) {
-			System.out.println("위험한 음식 있음");
+//			System.out.println("위험한 음식 있음");
 			session.setAttribute("danger", danger.get(0));
 			session.setAttribute("isDanger", 1);
 		}else {
@@ -408,6 +410,8 @@ public class MainController {
 	@PostMapping("search.do")
 	public String search(@RequestParam String selectname, String searchtext, String nutsort, HttpSession session) {
 		List<Food> best = foodservice.searchBest();
+		selectname = "name";
+		nutsort = "name";
 		for (int i = 0; i < best.size(); i++) {
 			System.out.println(best.get(i).getName());
 		}

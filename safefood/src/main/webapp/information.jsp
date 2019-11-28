@@ -88,7 +88,6 @@
 				<input type="text" id="searchtext" name="searchtext" value="${sessionScope.searchtext }" class="search-control">
 				<input type="submit" id="search_button" value="검색">
 				
-				<input type="radio" id="name" value="name" name="nutsort" checked="checked" style="margin-left:10px;"><label for="name">이름</label>
 				
 			</div>
 			</form>
