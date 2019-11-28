@@ -79,6 +79,9 @@ body {
 	margin:0px 100px 0px 0px;
 }
 
+.m-r-m10{
+	margin-right:-30px;
+}
 #head {
 	font-family: 'Jua', sans-serif;
 }
@@ -305,6 +308,10 @@ input.btn_allergy {
 	background: url("../cssimg/child_bg.png") !important;
 }
 
+.chart_class{
+	border-radius : 20px !important;
+	background: url("../cssimg/bottom_bg.png") !important;
+}
 
 /*----------------------------------- signup.jsp -----------------------------*/
 

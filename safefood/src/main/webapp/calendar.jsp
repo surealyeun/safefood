@@ -15,6 +15,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <link rel="stylesheet" href="css/main.css" media="all">
 <link rel="stylesheet" href="resources/calendarorganizer.css">
 
@@ -55,7 +56,7 @@
 	</header>
 
 	<div class="container m-t-70">
-		<h2 class="text-center">식사 달력</h2>
+		<h2 class="text-center">식사 달력</h2><br>
 		<div class="col-md-4">
 			<div class="calendar">
 				<div id="calendarContainer"></div>
@@ -65,8 +66,8 @@
 		<div class="col-md-8">
 			<div class="intakeData">
 					<div class="row">
-						<div class="col-md-8">
-							 <div id="series_chart_div" style="width: 500px; height: 300px;"></div>
+						<div class="col-md-8 chart_class" style="margin-left : 60px; margin-right:-80px;">
+							 <div id="series_chart_div" style="width: 400px; height: 300px;"></div>
 						</div>
 			
 						<div class="col-md-4 table-responsive">
@@ -213,6 +214,7 @@
 			title: '영양 정보',	
 			bubble: {textStyle: {fontSize: 11}}
 		};
+		console.log("carbo = "+$("#carbo"));
 		
 		var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
 		chart.draw(data, options);
