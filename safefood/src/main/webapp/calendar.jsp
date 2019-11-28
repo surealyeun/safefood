@@ -180,6 +180,7 @@
 				alert("Error Occur");
 			}
 		});
+		
 	});
 </script>
 
@@ -293,11 +294,13 @@ calendar.setOnClickListener('days-blocks',
 			},
 			success : function(res) {
 				console.log(res);
+/* 				location.reload(); */
 			},
 			error : function() {
 				alert("일일 섭취 정보 검색 실패");
 			}
 		});
+		
     }
 );
 
