@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+		<typeAlias type="com.ssafy.dto.Food" alias="food"/>
+		<typeAlias type="com.ssafy.dto.FoodPageBean" alias="bean"/>
+		<typeAlias type="com.ssafy.dto.User" alias="user"/>
+		<typeAlias type="com.ssafy.dto.userfood" alias="userfood"/>
+		<typeAlias type="com.ssafy.dto.Board" alias="board"/>
+		<typeAlias type="com.ssafy.dto.PageBean" alias="boardbean"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="mapper/food.xml"/>
+        <mapper resource="mapper/usermapper.xml"/>
+        <mapper resource="mapper/boardmapper.xml"/>
+    </mappers>
+</configuration>

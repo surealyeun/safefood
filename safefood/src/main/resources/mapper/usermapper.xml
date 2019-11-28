@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="safefood.usermapper">
+
+  <select id="selectUser" parameterType="string" resultType="user">
+  	select * from user 
+  	<if test= "id != null">
+  		where id = #{id}
+  	</if>
+  </select>
+  
+  <select id="selectAll" resultType="user">
+  	select * from user
+  </select>
+  
+  <select id="foodsize" parameterType="map" resultType="int">
+  	select sum(quantity) from userFood where id=#{id} and code=#{code}
+  </select>
+  
+  <update id="updateUser" parameterType="user">
+  	update user 
+  	<set>
+      <if test="password != null">password=#{password},</if>
+      <if test="name != null">name=#{name},</if>
+      <if test="email != null">email=#{email},</if>
+      <if test="phone != null">phone=#{phone},</if>
+      <if test="address != null">address=#{address},</if>
+      <if test="allergy != null">allergy=#{allergy}</if>
+    </set>
+  	where id=#{id}
+  </update>
+  
+  <delete id="removeUser" parameterType="string">
+  	delete from user
+  	<if test= "id != null">
+  		where id = #{id}
+  	</if>
+  </delete>
+  
+  <insert id="addUser" parameterType="user">
+  	insert into user values (#{id}, #{password}, #{name}, #{email}, #{phone}, #{address}, #{allergy}) 
+  </insert>
+  
+<!--   <insert id="insert" parameterType="user">
+  	insert into user values (id=#{id}, password=#{password}, name=#{name}, email=#{email}, phone=#{phone}, address=#{address}, allergy=#{allergy}) 
+  </insert> -->
+    
+  <select id="foodQuantityAll" parameterType="string" resultType="int">
+  	select sum(quantity) from userFood
+  	<if test= "id != null">
+  		where id = #{id}
+  	</if>
+  </select>
+  
+  <select id="foodscodeAll" parameterType="string" resultType="int">
+  	select code from userFood
+  	<if test= "id != null">
+  		where id = #{id}  group by code
+  	</if>
+  </select>
+  
+  <insert id="foodInsert" parameterType="map">
+  	insert into userFood(id, code, quantity) values (#{id}, #{code}, #{quantity})
+  </insert>
+  
+  <update id="foodUpdate" parameterType="map">
+  	update userFood set quantity=#{quantity} where id=#{id} and code=#{code} 
+  </update>
+  
+  <insert id="foodInsert3" parameterType="map">
+  	insert into userFood(id, code, quantity, mealtime, date) values (#{id}, #{code}, #{quantity}, #{mealtime}, #{date})
+  </insert>
+  
+  <select id="searchByDate" parameterType="map" resultType="userfood">
+  	select code, date, mealtime, id, calory, quantity, name, supportpereat
+  	carbo, protein, fat, sugar, natrium, chole, transfat
+  	from userfood join food as f using(code) 
+  	where id=#{id} and date &gt;= #{date} and date &lt;= #{date}
+  </select>
+
+  <update id="updatepw" parameterType="map">
+  	update user set password = #{password} where id=#{id}
+  </update>
+  
+  <select id="searchMonth" parameterType="map" resultType="userfood">
+  	select code, date, mealtime, id, calory, quantity, name, supportpereat
+  	carbo, protein, fat, sugar, natrium, chole, transfat 
+  	from userfood join food as f using(code) where month(date)=#{month} and id=#{id}
+  </select>
+</mapper>

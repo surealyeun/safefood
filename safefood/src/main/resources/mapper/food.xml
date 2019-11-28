@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.dao.FoodMapper">
+	<select id="searchall" parameterType="bean" resultType="food">
+		<if test="key != 'all'">
+			<if test="word != null">
+				<choose>
+					<when test="key == 'f1.name'">
+						select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code and f1.name like concat("%",#{word},"%")
+					</when>
+					
+					<when test="key == 'f1.maker'">
+						select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code and f1.maker like concat("%",#{word},"%")
+					</when>
+					
+					<when test="key == 'f1.material'">
+						select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code and f1.material like concat("%",#{word},"%")
+					</when>
+				</choose>
+			</if>
+		</if>
+		
+		<if test="key == 'all'">
+			select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code
+		</if>
+	</select>
+	
+	<select id="searchcode" parameterType="int" resultType="food">
+		select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code and f1.code = #{code}
+	</select>
+	
+	<select id="searchname" parameterType="string" resultType="food">
+		select * from foodInfo f1 , foodNutritionInfo f2 where f1.code=f2.code and f1.name = #{name}
+	</select>
+	
+	<select id="searchQuantity" parameterType="string" resultType="food">
+		select * from foodInfo f1, foodNutritionInfo f2 where f1.code=f2.code and f1.code in (select code from userFood where id = #{id} and quantity > 0)
+	</select>
+	
+	<select id="quantitylist" resultType="food">
+		select code, name, ifnull(sum(quantity), 0) total from userfood right join foodinfo using(code) group by code;
+	</select>
+	
+	<select id="searchBest" resultType="food">
+		select * from foodinfo order by count desc limit 3;
+	</select>
+	
+	<update id="countFood" parameterType="int">
+		update foodinfo set count=count+1 where code = #{code};
+	</update>
+
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="safefood.boardmapper">
+	<select id="searchNo" parameterType="int" resultType="board">
+		select * from board
+		<if test= "no != null">
+  			where no = #{no}
+  		</if>
+	</select>	
+	
+	<select id="searchAll" resultType="board">
+		select * from board
+	</select>
+	
+	<insert id="insertBoard" parameterType="board">
+		insert into board(id, title, contents) values (#{id}, #{title}, #{contents})
+	</insert>
+	
+	<select id="searchContent" parameterType="string" resultType="board">
+        select * from board
+         where title LIKE CONCAT('%',#{word},'%') or contents LIKE CONCAT('%',#{word},'%')
+    </select>
+	
+	<select id="count" parameterType="boardbean" resultType="int">
+		select count(*) from board
+	</select>
+	
+	<update id="updateBoard" parameterType="board">
+	  	update board 
+	  	<set>
+	      <if test="title != null">title=#{title},</if>
+	      <if test="contents != null">contents=#{contents},</if>
+	    </set>
+	    where no=#{no}
+	</update>
+
+  <delete id="deleteBoard" parameterType="int">
+  	delete from board
+  	<if test= "no != null">
+  		where no = #{no}
+  	</if>
+  </delete>
+</mapper>

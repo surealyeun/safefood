@@ -1,0 +1,459 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Jua&display=swap&subset=korean')
+	;
+
+body {
+	background: url("../cssimg/bottom_bg.png");
+}
+
+.container{
+	font-family: 'Jua', sans-serif;
+	font-weight:100 !important;
+}
+
+.m-t-15{
+	margin-top :15px;
+}
+
+.m-t-20{
+	margin-top :20px;
+}
+.m-t-40{
+	margin-top :40px;
+}
+
+.m-t-50{
+	margin-top :50px;
+}
+
+.m-t-70{
+	margin-top :70px;
+}
+
+.m-l-m10{
+	margin-left : -10px;
+}
+
+.m-l-m15{
+	margin-left : -15px;
+}
+.m-l-20{
+	margin-left :20px;
+}
+
+.m-l-40{
+	margin-left :40px;
+}
+
+.m-l-60{
+	margin-left :60px;
+}
+.m-l-450{
+	margin-left :450px;
+}
+
+
+.m-20{
+	margin:20px;
+}
+
+.m-l-m30{
+	margin-left : -30px;
+}
+
+.m-r-m10{
+	margin-right:-10;
+}
+
+.m-40{
+	margin:40px;
+}
+
+.m-rl-200{
+	margin:0px 170px;
+}
+
+.m-r-100{
+	margin:0px 100px 0px 0px;
+}
+
+#head {
+	font-family: 'Jua', sans-serif;
+}
+/* 	body {
+		padding-top: 70px;
+	}
+*/
+.main_contents p {
+	width: 1000px;
+	height: 520px;
+	margin: 0px auto;
+}
+
+.main_contents img {
+	width: 100%;
+}
+
+.form-control{
+	width : auto !important;
+}
+.navbar-fixed-top {
+	background-color: #d3e784;
+}
+
+a {
+	color: #42c777;
+	font-family: 'Jua', sans-serif;
+}
+
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 10px 15px 15px 0px; /* 상우하좌 */
+	font-size: 18px;
+	line-height: 20px;
+}
+/* .nav>li{background: url("../cssimg/li_bar.png");} */
+.nav>li>a {
+	display: block;
+}
+
+#main_contents {
+	background-color: white;
+	height: 530px;
+	background: url("../cssimg/child_bg.png") repeat-x;
+}
+
+#child_banner {
+	background: url("../cssimg/child.png");
+	float: center;
+	margin-left: 200px;
+	height: 510px;
+	width: 1200px;
+}
+
+#div_signin {
+	font-family: 'Jua', sans-serif;
+	padding: 130px 0px 0px 880px;
+}
+
+
+#login_btn {
+	float: right;
+}
+
+input.btn_search {
+	background: url("../cssimg/btn_search2.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px 50px 250px;
+}
+
+input.btn_search:hover {
+	background: url("../cssimg/btn_search.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px 50px 250px;
+}
+
+input.btn_calendar {
+	background: url("../cssimg/cal_button.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+input.btn_calendar:hover {
+	background: url("../cssimg/cal_button2.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+input.btn_crosswords {
+	background: url("../cssimg/cross_button.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+input.btn_crosswords:hover {
+	background: url("../cssimg/cross_button2.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+input.btn_allergy {
+	background: url("../cssimg/allergy_button.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+.logined{
+	background :  url("../cssimg/login_board.png") no-repeat;
+	height : 157px;
+	width : 288px;
+}
+
+/*----------------------------------- information.jsp -----------------------------*/
+#bodies {
+	padding-top: 100px;
+}
+
+
+.form-control3{
+	width : auto !important;
+}
+
+.select_name {
+	width: 85px !important; /* 원하는 너비설정 */
+	height: 43px !important;
+	padding: .8em .5em !important; /* 여백으로 높이 설정 */
+	font-family: 'Jua', sans-serif;
+	background: url("../cssimg/select_button.png") repeat-y !important;
+	/* 네이티브 화살표 대체 */
+	border: 1px solid #ccc !important;
+	-webkit-appearance: none !important; /* 네이티브 외형 감추기 */
+	-moz-appearance: none !important;
+	appearance: none !important;
+	border: 1px solid #eee !important;
+}
+
+.search-control {
+	width: 150px !important; /* 원하는 너비설정 */
+	height: 43px !important;
+	font-family: 'Jua', sans-serif;
+	padding: .8em .5em !important; /* 여백으로 높이 설정 */
+	border: 1px solid #ccc !important;
+	border-radius: 6px;
+}
+
+#search_button {
+	font-family: 'Jua', sans-serif;
+	border: 1px solid highlight;
+	background-color: #a3f2ff;
+	color: black;
+	padding: 5px;
+	height: 43px;
+	border-radius: 6px;
+	padding:12px 12px;
+}
+
+#search_button:hover {
+	color: white;
+	border: 1px solid #7fe8fa;
+	background-color: #7fe8fa;
+}
+
+.div_wrap {
+  height: 100%;
+  margin: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.bs-5-5{
+	box-shadow: 3px 3px #c8c8c8;
+}
+
+/*----------------------------------- login.jsp -----------------------------*/
+
+
+/*----------------------------------- calendar.jsp -----------------------------*/
+#container2{
+	font-family: 'Jua', sans-serif;
+	margin-top:80px; !important
+}
+
+#cals{
+	background: url("../cssimg/child_bg.png") !important;
+}
+
+
+/*----------------------------------- signup.jsp -----------------------------*/
+
+#container3{
+	font-family: 'Jua', sans-serif;
+	margin-top:70px;
+	margin-left : 350px;
+}
+
+#main_contents2{
+	width: 795px;
+	height: 800px;
+	background: url("../cssimg/signup_form5.png") no-repeat !important;
+	background-position: right;
+}
+
+.form-signup{
+	padding-top : 160px;
+	padding-left : 220px;
+}
+
+.form-control2{
+	display : inline-block;
+	width : 150px !important;
+	height : 34px;
+	padding : 6px 12px;
+	margin : 0px 10px;
+	line-height : 1.42857143;
+	background-color : #fff;
+	background-image : none;
+	border : 1px solid #ccc;
+	border-radius : 4px;
+	box-shadow :inset 0 1px 1px rgba(0,0,0,.075);
+	tranisition : border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	position : absolute;
+	left : 740px;
+}
+label{
+	font-weight: 100 !important;
+	margin-top : 3px;
+}
+
+.btn_signup{
+	position : absolute;
+	left : 730px;
+	font-size : 16px;
+	border: 1px solid olive;
+	background-color: #fff;
+	color: black;
+	padding: 5px;
+	height: 43px;
+	border-radius: 6px;
+	padding:12px 12px;
+}
+
+.btn_signup:hover{
+	color: white;
+	border: 1px solid orange;
+	background-color: orange;
+}
+
+.btn_signup2{
+	position : absolute;
+	left : 780px;
+	font-size : 16px;
+	border: 1px solid olive;
+	background-color: #fff;
+	color: black;
+	height: 30px;
+	text-align:center;
+	border-radius: 6px;
+	padding:5px;
+}
+
+.btn_signup2:hover{
+	color: white;
+	border: 1px solid orange;
+	background-color: orange;
+}
+
+.input_signup{
+	position : absolute;
+	left : 650px;
+	width:120px;
+	height:30px;
+	font-size : 16px;
+	border: 1px solid olive;
+	background-color: #fff;
+	color: black;
+	border-radius: 6px;
+}
+
+/*----------------------------------- detail.jsp -----------------------------*/
+#detail_image{
+	border:1px solid #fef8e8;
+	
+}
+
+.detail_img>.panel{
+	background-color: #fef8e8;
+}
+
+.detail_ingred{
+	background-color: #fff;
+}
+
+#addbtn {
+	font-family: 'Jua', sans-serif;
+	border: 1px solid highlight;
+	background-color: #a3f2ff;
+	color: black;
+	padding: 5px;
+	height: 43px;
+	border-radius: 6px;
+	padding:12px 12px;
+}
+
+#addbtn:hover {
+	color: white;
+	border: 1px solid #7fe8fa;
+	background-color: #7fe8fa;
+}
+
+/*----------------------------------- update.jsp -----------------------------*/
+
+#main_contents5{
+	width: 795px;
+	height: 800px;
+	background: url("../cssimg/update_form.png") no-repeat !important;
+	background-position: right;
+}
+
+/*----------------------------------- crossword.jsp -----------------------------*/
+
+.yellow_body{
+	background: url("../cssimg/bodys.png");
+}
+
+
+/*----------------------------------- algame.jsp -----------------------------*/
+
+.sky_body{
+	background: url("../cssimg/sky.png") no-repeat;
+
+}
+
+.al_body{
+	margin-top : 150px;
+	margin-left : 250px;
+	width:907; height:605;
+	background: url("../cssimg/castle_def4.png") no-repeat !important;
+}
