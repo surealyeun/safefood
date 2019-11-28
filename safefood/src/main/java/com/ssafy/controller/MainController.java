@@ -249,6 +249,50 @@ public class MainController {
 		return eatC;
 	}
 	
+//	@PostMapping("searchByDate.do")
+//	public String searchByDate(@RequestParam Date date, HttpSession session) {
+//		User user = (User) session.getAttribute("user");
+//		// 일별 섭취
+//		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+//		
+////		System.out.println(date);
+//		List<userfood> eatC = service.searchByDate(user.getId(), format.format(date));
+//		double supportpereat=0, calory=0, carbo=0, protein=0,fat=0, sugar=0, natrium=0, chole=0, fattyacid=0, transfat=0;
+//		for(int i=0; i<eatC.size(); i++) {
+//			
+//			supportpereat += foodservice.search(eatC.get(i).getCode()).getSupportpereat() * eatC.get(i).getQuantity();
+//			calory +=foodservice.search(eatC.get(i).getCode()).getCalory() * eatC.get(i).getQuantity();
+//			carbo += foodservice.search(eatC.get(i).getCode()).getCarbo() * eatC.get(i).getQuantity();
+//			protein +=foodservice.search(eatC.get(i).getCode()).getProtein() * eatC.get(i).getQuantity();
+//			fat +=foodservice.search(eatC.get(i).getCode()).getFat() * eatC.get(i).getQuantity();
+//			sugar += foodservice.search(eatC.get(i).getCode()).getSugar() * eatC.get(i).getQuantity();
+//			natrium +=foodservice.search(eatC.get(i).getCode()).getNatrium() * eatC.get(i).getQuantity();
+//			chole += foodservice.search(eatC.get(i).getCode()).getChole() * eatC.get(i).getQuantity();
+//			fattyacid += foodservice.search(eatC.get(i).getCode()).getFattyacid() * eatC.get(i).getQuantity();
+//			transfat += foodservice.search(eatC.get(i).getCode()).getTransfat() * eatC.get(i).getQuantity();
+//			
+//			System.out.println("이날 뭐먹음? "+eatC.get(i));
+//			
+//		}
+//		
+//		
+//		session.setAttribute("supportpereat", supportpereat);	
+//		session.setAttribute("calory", calory);
+//		session.setAttribute("carbo", carbo);
+//		session.setAttribute("protein", protein);
+//		session.setAttribute("fat", fat);
+//		session.setAttribute("sugar", sugar);
+//		session.setAttribute("natrium", natrium);
+//		session.setAttribute("chole", chole);
+//		session.setAttribute("fattyacid", fattyacid);
+//		session.setAttribute("transfat", transfat);		
+//		System.out.println(sugar);
+//		session.setAttribute("userfood", eatC);
+//		
+//		return "redirect:calendar.jsp";
+//	}
+//	
+	
 	@PostMapping("intake.do")
 	public String getIntake(HttpSession session) {
 		double supportpereat=0, calory=0, carbo=0, protein=0,fat=0, sugar=0, natrium=0, chole=0, fattyacid=0, transfat=0;
@@ -402,6 +446,7 @@ public class MainController {
 		
 		merge(0, foods.size()-1, nutsort);
 	
+		session.setAttribute("best", best);
 		session.setAttribute("foods", foods);
 		session.setAttribute("selectname", selectname);
 		session.setAttribute("searchtext", searchtext);
@@ -435,6 +480,7 @@ public class MainController {
 		
 		merge(0, foods.size()-1, nutsort);
 	
+		session.setAttribute("best", best);
 		session.setAttribute("foods", foods);
 		session.setAttribute("selectname", selectname);
 		session.setAttribute("searchtext", searchtext);
