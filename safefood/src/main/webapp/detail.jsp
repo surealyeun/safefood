@@ -255,10 +255,13 @@
 	
 	$("#addbtn").on("click", function() {
 		$.ajax({
-			url: "food.do",
+			url: "eatfood.do",
 			type: "post",
-			data: "action=quantity&code="+$("#foodcode").val()+"&number="+$("#number").val(),
-			success: function(redData) {
+			data: {
+				code:$("#foodcode").val(), num:$("#number").val(), mealtime: $("#join_time").val(), 
+				year:$("#join_year").val(), month:$("#join_month").val(), day: $("#join_day").val()
+			},
+			success: function(resData) {
 				$("#quantityresult").text("수량이 변경되었습니다.");
 			},
 			error: function() {
