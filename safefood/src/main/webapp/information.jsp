@@ -34,7 +34,7 @@
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li style="opacity: 1.0;"><a href="listBoard.do">공지사항</a></li>
+						<li style="opacity: 1.0;"><a href="listBoard.do">자유게시판</a></li>
 						<c:choose>
 							<c:when test="${empty sessionScope.IsLogin }">
 								<li><a href="login.jsp">로그인</a></li>
@@ -147,7 +147,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="information.jsp">상품 정보<span class="sr-only">(current)</span></a></li>
-					<li><a href="notice.jsp">공지사항</a></li>
+					<li><a href="notice.jsp">자유게시판</a></li>
 					<c:choose>
 						<c:when test="${empty sessionScope.IsLogin }">
 							<li><a href="login.jsp">로그인</a></li>
