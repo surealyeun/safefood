@@ -6,7 +6,9 @@
 
 body {
 	background: url("../cssimg/bottom_bg.png");
+	
 }
+html{cursor: url(../cssimg/cursors2.png), auto;}
 
 .container{
 	font-family: 'Jua', sans-serif;
@@ -50,8 +52,8 @@ body {
 .m-l-60{
 	margin-left :60px;
 }
-.m-l-450{
-	margin-left :450px;
+.m-l-530{
+	margin-left :530px;
 }
 
 
@@ -223,8 +225,19 @@ input.btn_allergy {
 	margin: 50px 0px;
 }
 
+input.btn_allergy:hover {
+	background: url("../cssimg/allergy_button2.png") no-repeat;
+	border: none;
+	height: 250px;
+	cursor: pointer;
+	float: left;
+	width: 17%;
+	margin: 50px 0px;
+}
+
+
 .logined{
-	background :  url("../cssimg/login_board.png") no-repeat;
+	background :  url("../cssimg/login_board2.png") no-repeat;
 	height : 157px;
 	width : 288px;
 }
@@ -232,6 +245,10 @@ input.btn_allergy {
 /*----------------------------------- information.jsp -----------------------------*/
 #bodies {
 	padding-top: 100px;
+}
+
+.monkeys{
+	
 }
 
 
@@ -312,7 +329,6 @@ input.btn_allergy {
 	border-radius : 20px !important;
 	background: url("../cssimg/bottom_bg.png") !important;
 }
-
 /*----------------------------------- signup.jsp -----------------------------*/
 
 #container3{
@@ -454,13 +470,61 @@ label{
 /*----------------------------------- algame.jsp -----------------------------*/
 
 .sky_body{
-	background: url("../cssimg/sky.png") no-repeat;
-
+	background: url("../cssimg/bodys.png");
+	height:100%;
 }
 
-.al_body{
-	margin-top : 150px;
-	margin-left : 250px;
-	width:907; height:605;
+#al_body{
+	margin-left : 10%;
 	background: url("../cssimg/castle_def4.png") no-repeat !important;
+}
+.allergy_left{
+	float:left;
+}
+
+.bind{
+	
+	width:907;
+	height:605; 
+}
+#msg{
+	float:none;
+}
+
+.myallergy{
+	margin-left : 35%;
+}
+
+.myallergy2{
+	 margin-left : 42%;
+}
+
+/*----------------------------------- find.jsp -----------------------------*/
+
+.finds{
+	height: 500px;
+	background: url("../cssimg/find_form.png") no-repeat !important;
+	
+}
+
+#finds_button {
+	font-family: 'Jua', sans-serif;
+	border: 1px solid #ffde9b;
+	background-color: #faecd1;
+	color: black;
+	padding: 5px;
+	height: 43px;
+	border-radius: 6px;
+	padding:12px 12px;
+}
+
+#finds_button:hover {
+	font-family: 'Jua', sans-serif;
+	border: 1px solid highlight;
+	background-color: #a3f2ff;
+	color: black;
+	padding: 5px;
+	height: 43px;
+	border-radius: 6px;
+	padding:12px 12px;
 }

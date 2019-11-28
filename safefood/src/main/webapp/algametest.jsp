@@ -49,44 +49,39 @@
 	</header>
 	<div class="container m-t-70">
 		<h1 style="margin-left:300px; display: inline-block; color:red">알러지&nbsp </h1>
-		<h2 class="form-signin-heading" style="display: inline-block; color:black"> 유발 음식을 골라 </h2>
+		<h2 class="form-signin-heading" style="display: inline-block; color:black"> 유발 음식을 골라&nbsp </h2>
 		<h1 class="form-signin-heading" style="display: inline-block; color:blue"> 몸을</h1>
 		<h1 class="form-signin-heading" style="display: inline-block; color:blue"> 보호</h1>
 		<h2 class="form-signin-heading" style="display: inline-block; color:black"> 하세요! </h2>
 		<div id="al_body">
-			<div class="bind">
-			<c:if test="${!empty isDanger }">
 				<br>
 				<div class="myallergy">
 				<h3 style="display: inline-block; color:red">${IsLogin }</h3>
 				<h3  style="display: inline-block; color:black">님이 가진 알러지</h3></div>
 				<div class="myallergy2"><h3>
-				<c:forEach items="${sessionScope.allergy }" var="al"> ${al }</c:forEach> </h3>
+				<c:forEach items="" var="al"></c:forEach> </h3>
 				</div>
 			
 			<div class="allergy_left col-md-offset-1 col-md-2">
 				<h2>1번</h2>
-				<button id="1btn" style="background:#fff; border:1px solid #ccc"><img src="${safe1.img }" style='width: 120px; height: 120px;'></button>
-				<h5 style="margin-left:30px;">	${safe1.name }</h5>
+				<button id="1btn" style="background:#fff; border:1px solid #ccc"><img src="" style='width: 120px; height: 120px;'></button>
+
 			</div>
 			<div class="allergy_left col-md-offset-1 col-md-2">
 				<h2>2번</h2>
-				<button id="2btn" style="background:#fff; border:1px solid #ccc"><img src="${safe2.img }" style='width: 120px; height: 120px;'></button>
-				<h5 style="margin-left:30px;">	${safe2.name }</h5>
+				<button id="2btn" style="background:#fff; border:1px solid #ccc"><img src="" style='width: 120px; height: 120px;'></button>
+
 			</div>
 			<div class="allergy_left col-md-offset-1 col-md-2">
 				<h2>3번</h2>	
-				<button id="3btn" style="background:#fff; border:1px solid #ccc"><img src="${danger.img }" style='width: 120px; height: 120px;'></button>
-				<h5 style="margin-left:30px;">	${danger.name }</h5>
+
 			</div>
 			
-			<div id="msg" style="position:absolute; margin-top:300px; margin-left:100px;"></div>
+			<div id="msg"></div>
 					
-			</c:if>
-			<c:if test="${empty isDanger }">
+			<c:if test="$">
 				<h1 class="text-center">알러지를 유발하는 음식이 없어요ㅜ</h1>
 			</c:if>
-		</div>
 		</div>
 	</div>
 </body>

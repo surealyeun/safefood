@@ -98,7 +98,7 @@
 						<div id="div_signin">
 							<br><br>
 							<div class="logined" style="padding-top:1px;">
-								<div class="m-t-20 m-l-40">
+								<div class="m-l-40" style="margin-top:7px;">
 								<h3 class="form-signin-heading" style="display: inline-block; color:#e0feea">반가워요,</h3>
 							    <h3 class="form-signin-heading" style="display: inline-block; color:red;">${user.id }</h3>
 							    <h3 class="form-signin-heading" style="display: inline-block; color:#e0feea;">님!</h3><br>
@@ -133,4 +133,8 @@
    	    </div>
   	</div>
 </body>
+
+<script>
+$(document).one("click",function(){ $('#child_banner').css('background','url("cssimg/child3.png")') });
+</script>
 </html>

@@ -58,6 +58,7 @@
 	<div class="container m-t-70">
 		<h2 class="text-center">식사 달력</h2><br>
 		<div class="col-md-4">
+		<br><br><br><br><br><br>
 			<div class="calendar">
 				<div id="calendarContainer"></div>
 			</div>
