@@ -539,7 +539,6 @@ public class MainController {
 		Date today = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("MM");
 		
-		// 일별 섭취
 		List<userfood> eatC = service.searchMonth(user.getId(), Integer.parseInt(format.format(today)));
 		// 월별 섭취
 		List<userfood> eatformonth = service.searchMonth(user.getId(), Integer.parseInt(format.format(today)));
@@ -553,16 +552,16 @@ public class MainController {
 		double supportpereat=0, calory=0, carbo=0, protein=0,fat=0, sugar=0, natrium=0, chole=0, fattyacid=0, transfat=0;
 		for(int i=0; i<eatC.size(); i++) {
 			
-			supportpereat += foodservice.search(eatC.get(i).getCode()).getSupportpereat();
-			calory +=foodservice.search(eatC.get(i).getCode()).getCalory();
-			carbo += foodservice.search(eatC.get(i).getCode()).getCarbo();
-			protein +=foodservice.search(eatC.get(i).getCode()).getProtein();
-			fat +=foodservice.search(eatC.get(i).getCode()).getFat();
-			sugar += foodservice.search(eatC.get(i).getCode()).getSugar();
-			natrium +=foodservice.search(eatC.get(i).getCode()).getNatrium();
-			chole += foodservice.search(eatC.get(i).getCode()).getChole();
-			fattyacid += foodservice.search(eatC.get(i).getCode()).getFattyacid();
-			transfat += foodservice.search(eatC.get(i).getCode()).getTransfat();
+			supportpereat += foodservice.search(eatC.get(i).getCode()).getSupportpereat()* eatC.get(i).getQuantity();
+			calory +=foodservice.search(eatC.get(i).getCode()).getCalory()* eatC.get(i).getQuantity();
+			carbo += foodservice.search(eatC.get(i).getCode()).getCarbo()* eatC.get(i).getQuantity();
+			protein +=foodservice.search(eatC.get(i).getCode()).getProtein()* eatC.get(i).getQuantity();
+			fat +=foodservice.search(eatC.get(i).getCode()).getFat()* eatC.get(i).getQuantity();
+			sugar += foodservice.search(eatC.get(i).getCode()).getSugar()* eatC.get(i).getQuantity();
+			natrium +=foodservice.search(eatC.get(i).getCode()).getNatrium()* eatC.get(i).getQuantity();
+			chole += foodservice.search(eatC.get(i).getCode()).getChole()* eatC.get(i).getQuantity();
+			fattyacid += foodservice.search(eatC.get(i).getCode()).getFattyacid()* eatC.get(i).getQuantity();
+			transfat += foodservice.search(eatC.get(i).getCode()).getTransfat()* eatC.get(i).getQuantity();
 			
 			
 		}
@@ -582,7 +581,7 @@ public class MainController {
 		
 		
 //		session.setAttribute("eatF", eatF);
-		session.setAttribute("eatformonth", eatformonth);
+		session.setAttribute("userinfo", eatC);
 		
 		
 		
