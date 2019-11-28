@@ -73,53 +73,53 @@
 						<div class="col-md-4 table-responsive">
 							<table class="table table-condensed">
 								<tr>
-									<td>총 제공량</strong></td>
+									<td>총 제공량</td>
 									<td id="daily">${supportpereat }</td>
 								</tr>
 								<tr>
-									<td>칼로리</strong></td>
+									<td>칼로리</td>
 									<td id="calorie">${calory }</td>
 								</tr>
 								<tr>
-									<td>탄수화물</strong></td>
+									<td>탄수화물</td>
 									<td id="carbo">${carbo }</td>
 								</tr>
 								<tr>
-									<td>단백질</strong></td>
+									<td>단백질</td>
 									<td id="protein">${protein }</td>
 								</tr>
 								<tr>
-									<td>지방</strong></td>
+									<td>지방</td>
 									<td id="fat">${fat }</td>
 								</tr>
 								<tr>
-									<td>당류</strong></td>
+									<td>당류</td>
 									<td id="sugar">${sugar }</td>
 								</tr>
 								<tr>
-									<td>나트륨</strong></td>
+									<td>나트륨</td>
 									<td id="natrium">${natrium }</td>
 								</tr>
 								<tr>
-									<td>콜레스테롤</strong></td>
+									<td>콜레스테롤</td>
 									<td id="cholesterol">${chole }</td>
 								</tr>
 								<tr>
-									<td>포화지방산</strong></td>
+									<td>포화지방산</td>
 									<td id="saturfat">${fattyacid }</td>
 								</tr>
 								<tr>
-									<td>트랜스지방</strong></td>
+									<td>트랜스지방</td>
 									<td id="transfat">${transfat }</td>
 								</tr>
 							</table>
 						</div>
 					</div>
 					
-					<br>
-					<br>
 			
-					<div class="row">	
+					<div class="row">
+					아아
+					<div>${userinfo }</div>					
 						<div class="col-md-offset-1 col-md-10">
 							<div class="panel panel-danger">
 								<div class="panel-heading heading">
@@ -128,29 +128,23 @@
 								<div class="panel-body table-responsive">
 									<table class="table table-condensed">
 										<tr>
-											<td class="text-center">번호</strong></td>
-											<td class="text-center">제품명</strong></td>
-											<td class="text-center">수량</strong></td>
-											<td class="text-center">식사 시간</strong></td>
+											<td class="text-center">제품명</td>
+											<td class="text-center">수량</td>
+											<td class="text-center">날짜</td>
+											<td class="text-center">식사 시간</td>
 										</tr>
-										<c:forEach items="${foodsCal }" var="food" varStatus="status">
+										
+										<c:forEach items="${sessionScope.userinfo }" var="user">
 										<tr>
-											<td id="name" class="text-center">${status.index+1 }</td>
-											<td id="maker" class="text-center">${food.name }</td>
-											<td id="allergy" class="text-center">${quantities[status.index]}</td>	
+											<td id="name" class="text-center">${user.name }</td>
+											<td id="quantity" class="text-center">${user.quantity }</td>
+											<td id="eatdate" class="text-center">${user.date}</td>	
+											<td id="eatdate" class="text-center">${user.mealtime}</td>
 										</tr>
 										</c:forEach>
 									</table>
 									<br>
 									<br>
-			<%-- 						<table class="table table-condensed">
-										<tr>
-											<td class="text-center">재료정보</strong></td>
-										</tr>
-										<tr>
-											<td id="material">${food.material }</td>
-										</tr>
-									</table> --%>
 								</div>
 							</div>
 						</div>
