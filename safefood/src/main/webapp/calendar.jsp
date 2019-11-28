@@ -115,11 +115,9 @@
 							</table>
 						</div>
 					</div>
-					
-			
-					<div class="row">
-					아아
-					<div>${userinfo }</div>					
+					<br>
+					<br>
+					<div class="row">	
 						<div class="col-md-offset-1 col-md-10">
 							<div class="panel panel-danger">
 								<div class="panel-heading heading">
