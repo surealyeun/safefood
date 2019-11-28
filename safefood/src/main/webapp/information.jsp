@@ -103,7 +103,7 @@
 	<c:forEach items="${sessionScope.foods }" var="food">
 		<form method="post" action="detail.do">
 			<div class="col-md-6 col-sm-6" style="height:250px">
-				<div style="position:relative; margin-bottom:-30px; margin-left:450px; z-index:99;"><img src="cssimg/info_monkey3.png" style='no-repeat !important;'></div>
+				<div class="monkeys" style="position:relative; margin-bottom:-30px; margin-left:450px; z-index:99;"><img src="cssimg/info_monkey3.png" style='no-repeat !important;'></div>
 				<div class='panel m-t-15 draw_panel bs-5-5' style="height:200px; overflow:hidden;border-radius:10px;position:relative; z-index:98;">
 					<input type="hidden" name="action" value="detail">
 					<input type="hidden" name="name" value="${food.name }">

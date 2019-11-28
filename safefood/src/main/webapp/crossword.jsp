@@ -69,14 +69,15 @@
 	</header>
 	
 	<div class="container m-t-70">
-		<h1 class="m-l-450" style="display: inline-block; color:red">가</h1>
+		<img src="cssimg/english.png" width="100px" height="62px" style="position:absolute; margin-left : 410px;">
+		<h1 class="m-l-530" style="display: inline-block; color:red">가</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:orange">로</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:green">세</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:#0096ff">로</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:black"> 게</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:black">임</h1>
-		<img src="cssimg/flying_abo.png" style="position : absolute; left:180px; top:550px;">
-		<img src="cssimg/flying_pmang.png" style="position : absolute; left:1250px; top:100px;">
+		<img src="cssimg/flying_abo.png" style="position : absolute; left:250px; top:500px;">
+		<img src="cssimg/flying_pmang.png" style="position : absolute; left:1250px; top:200px;">
 		<div id="container1">
 			
 		</div>

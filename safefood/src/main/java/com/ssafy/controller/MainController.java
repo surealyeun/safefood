@@ -458,7 +458,8 @@ public class MainController {
 		for (int i = 0; i < allergys.length; i++) {
 			int minIndex = i;
 			for (int j = i; j < allergys.length; j++) { // i~8
-				if (allergys[minIndex].charAt(0) > allergys[j].charAt(0)) { // 최소값의 위치를 찾기
+				if (allergys[minIndex].charAt(0) >
+				allergys[j].charAt(0)) { // 최소값의 위치를 찾기
 					minIndex = j;
 				}
 			}
