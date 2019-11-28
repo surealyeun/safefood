@@ -55,7 +55,7 @@
 	
 	<div class="container m-t-70 " id="loginScreen">
 	<br><br>
-      <form class="text-center col-md-offset-2 col-md-8" action="User.do">
+      <form class="form-signin text-center finds col-md-offset-2 col-md-8" action="User.do">
       <div style="margin-top:120px">
       	<input type="hidden" name="action" value="find">
         <h2 class="form-signin-heading"> 비밀번호 찾기</h2><br>

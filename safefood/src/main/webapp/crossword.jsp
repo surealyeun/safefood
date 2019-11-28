@@ -76,8 +76,6 @@
         <h1 class="form-signin-heading" style="display: inline-block; color:#0096ff">로</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:black"> 게</h1>
         <h1 class="form-signin-heading" style="display: inline-block; color:black">임</h1>
-		<img src="cssimg/flying_abo.png" style="position : absolute; left:250px; top:500px;">
-		<img src="cssimg/flying_pmang.png" style="position : absolute; left:1250px; top:200px;">
 		<div id="container1">
 			
 		</div>

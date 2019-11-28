@@ -54,6 +54,9 @@
 		<h1 class="form-signin-heading" style="display: inline-block; color:blue"> 보호</h1>
 		<h2 class="form-signin-heading" style="display: inline-block; color:black"> 하세요! </h2>
 		<div id="al_body">
+		
+		<img src="cssimg/flying_abo.png" style="position : absolute; left:250px; top:500px;">
+		<img src="cssimg/flying_pmang.png" style="position : absolute; left:1250px; top:200px;">
 			<div class="bind">
 			<c:if test="${!empty isDanger }">
 				<br>
@@ -77,7 +80,7 @@
 			<div class="allergy_left col-md-offset-1 col-md-2">
 				<h2>3번</h2>	
 				<button id="3btn" style="background:#fff; border:1px solid #ccc"><img src="${danger.img }" style='width: 120px; height: 120px;'></button>
-				<h5 style="margin-left:30px;">	${danger.name }</h5>
+				<h5 style="margin-left:30px;">	${danger.name }
 			</div>
 			
 			<div id="msg" style="position:absolute; margin-top:300px; margin-left:100px;"></div>
