@@ -167,7 +167,8 @@ public class MainController {
 		String[] alls = {"대두", "땅콩", "우유", "게", "새우", "참치", "연어", "쑥", "소고기", "닭고기", "돼지고기", "복숭아", "민들레", "계란흰자"};
 		for (int i = 0; i < all.length; i++) {
 			all[i] = alls[Integer.parseInt(all[i])];
-			System.out.println("사용자가 가진 알러지"+all[i]);
+			System.out.println("사용자가 가진 알러지:"+all[i]);
+			all[i].trim();
 		}
 		
 		List<Food> fs = foodservice.searchAll(new FoodPageBean("f1.name", "", null, 0));
@@ -175,17 +176,21 @@ public class MainController {
 		List<Food> safe = new ArrayList<>();
 		List<Food> danger = new ArrayList<>();
 		for (int i = 0; i < fs.size(); i++) {
+			boolean flag = false;
 			for (int j = 0; j < all.length; j++) {
-				System.out.println("식품 원재료: "+fs.get(i).getMaterial());
+//				System.out.println("식품 원재료: "+fs.get(i).getMaterial());
 				if(fs.get(i).getMaterial().contains(all[j])) {
+					flag = false;
 					danger.add(fs.get(i));
-					System.out.println("danger"+fs.get(i));
+					System.out.println("danger"+fs.get(i)+" "+all[j]);
 					break;
 				}else {
-					safe.add(fs.get(i));
-					System.out.println("safe"+fs.get(i));
-					break;
+					flag = true;
 				}
+			}
+			if(flag) {
+				safe.add(fs.get(i));
+				System.out.println("safe"+fs.get(i));
 			}
 		}
 		session.setAttribute("allergy", all);
@@ -490,6 +495,11 @@ public class MainController {
 		session.setAttribute("quantity", quantity);
 
 		return "redirect:detail.jsp";
+	}
+	
+	@GetMapping("/crossword.do")
+	public String cross() {
+		return "redirect:crossword.jsp";
 	}
 	
 	@Autowired

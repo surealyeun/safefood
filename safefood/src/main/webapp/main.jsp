@@ -119,11 +119,11 @@
 	   	    	 </div>
 	   	    	 
 	   	    	 <div id="link_calendar">
-	   	    	 	<input type="button" class="btn_calendar" onclick="location.href='calendar.jsp'">
+	   	    	 	<input type="button" class="btn_calendar" onclick="location.href='calendar.do'">
 	   	    	 </div>
 	   	    	 
 	   	    	 <div id="link_crosswords">
-	   	    	 	<input type="button" class="btn_crosswords" onclick="location.href='crossword.jsp'">
+	   	    	 	<input type="button" class="btn_crosswords" onclick="location.href='crossword.do'">
 	   	    	 </div>
 	   	    	 
 	   	    	 <div id="link_allergy">
